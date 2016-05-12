@@ -5,6 +5,9 @@
  */
 
 import React, { Component } from 'react';
+import NavigationBar from 'react-native-navbar';
+import Appconfig from './config';
+import AlbumList from './component/albumlist';
 import {
   AppRegistry,
   StyleSheet,
@@ -14,24 +17,32 @@ import {
 
 class babyinstant extends Component {
   render() {
+    var titleConfig = {
+      title:'全部'
+    }
+    var rightbutton = {
+      title:'我',
+      handler:() => alert('111111'),
+    }
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+      <View>
+        <View style = {{ flex : 1,}}>
+           <NavigationBar
+              title = { titleConfig }
+              rightButton = { rightbutton } />     
+        </View>
+        <View style = {styles.albumlist}>
+          <AlbumList />
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  albumlist:{
+    backgroundColor:'#666'
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
