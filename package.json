@@ -1,19 +1,12 @@
 {
-  "name": "badyinstall",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "babyinstant",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node_modules/react-native/local-cli/cli.js start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lobinfeng/babyinstantApp.git"
-  },
-  "author": "lobinfeng",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lobinfeng/babyinstantApp/issues"
-  },
-  "homepage": "https://github.com/lobinfeng/babyinstantApp#readme"
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-native": "^0.25.1"
+  }
 }
